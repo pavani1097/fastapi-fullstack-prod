@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FastAPI Fullstack</title>
+</head>
+<body>
+    <h1>Frontend</h1>
+    <button onclick="fetchData()">Call Backend</button>
+    <p id="response"></p>
+
+    <script>
+        async function fetchData() {
+            const res = await fetch("http://localhost:8000/");
+            const data = await res.json();
+            document.getElementById("response").innerText = data.message;
+        }
+    </script>
+</body>
+</html>
