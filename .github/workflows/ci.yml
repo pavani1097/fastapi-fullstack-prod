@@ -31,7 +31,7 @@ jobs:
       - name: Build Docker images
         run: docker compose build
 
-            - name: Send Success Email
+      - name: Send Success Email
         if: success()
         uses: dawidd6/action-send-mail@v3
         with:
